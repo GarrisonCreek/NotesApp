@@ -14,3 +14,4 @@ final class NoteData: ObservableObject {
     
 }
 
+var notes: [Note] = Note.testNotes

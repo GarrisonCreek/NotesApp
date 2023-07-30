@@ -13,7 +13,7 @@ struct Note: Identifiable {
     var title: String
     var description: String
     var date: Date
-    var priority: Int // 1, 2, 3, 1 being highest priority
+    var priority: Int // 1, 2, 3, with 3 being the highest priority
     var isValid: Bool {
         !title.isEmpty
     }

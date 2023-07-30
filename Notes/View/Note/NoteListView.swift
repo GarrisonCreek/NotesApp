@@ -16,16 +16,9 @@ struct NoteListView: View {
         
         NavigationView {
             List {
-//                ForEach(Note) {note in
-//                    NavigationLink {
-//                        NoteDetailView()
-//                    } label: {
-//                        Text(note.title)
-//                    }
-//                }
                 ForEach(noteData.notes) {note in
                     NavigationLink {
-                        NoteDetailView()
+                        NoteDetailView(note: note)
                     } label: {
                         Text(note.title)
                     }
@@ -42,18 +35,11 @@ struct NoteListView: View {
             }
             .sheet(isPresented: $newNote) {
                 NewNoteView()
-//                    .environmentObject(modelData)
             }
         }
         
     }
 }
-
-//extension NoteListView {
-//    private var notes: [Note] {
-//        noteData.getNotesArray()
-//    }
-//}
 
 struct NotesList_Previews: PreviewProvider {
     static var previews: some View {
